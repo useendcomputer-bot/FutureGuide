@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #07101e;
+    color: #f2f7ff;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #0b1729;
+    border-bottom: 1px solid #20344e;
+    padding: 10px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    overflow-x: auto;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.nav a {
+    white-space: nowrap;
+    padding: 8px 10px;
+    border-radius: 9px;
+    color: #c9d6e7;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background: #182a43;
+    color: white;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+    color: #36d9e8;
+    margin-right: 5px;
+}
+
+.logo span {
+    color: #43e6a5;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 22px 15px 45px;
+}
+
+.hero {
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.heroText,
+.heroArt {
+    flex: 1;
+}
+
+h1 {
+    font-size: clamp(42px, 12vw, 76px);
+    line-height: .95;
+    margin: 15px 0;
+}
+
+h1 span,
+h2 span {
+    color: #36d9e8;
+}
+
+h2 {
+    font-size: 38px;
+    line-height: 1.1;
+}
+
+h3 {
+    margin-top: 5px;
+}
+
+p {
+    color: #b8c7d9;
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 12px;
+    padding: 13px 16px;
+    margin: 5px 3px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.primary {
+    background: #36d9e8;
+    color: #06101a;
+}
+
+.green {
+    background: #43e6a5;
+    color: #06101a;
+}
+
+.dark {
+    background: #182a43;
+    color: white;
+}
+
+.card {
+    background: #0d1a2d;
+    border: 1px solid #243a55;
+    border-radius: 17px;
+    padding: 18px;
+    margin: 14px 0;
+}
+
+.card:hover {
+    border-color: #36d9e8;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.art {
+    height: 280px;
+    border-radius: 28px;
+    border: 1px solid #24405c;
+    background: radial-gradient(
+        circle,
+        #17354b,
+        #07101e 68%
+    );
+    display: grid;
+    place-items: center;
+}
+
+.orbit {
+    width: 190px;
+    height: 190px;
+    border: 2px solid #36d9e8;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.core {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #36d9e8;
+    color: #07101e;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid #36d9e8;
+    color: #36d9e8;
+    border-radius: 20px;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.option {
+    width: 100%;
+    background: #0d1a2d;
+    border: 1px solid #29425f;
+    color: white;
+    border-radius: 13px;
+    padding: 16px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.option:hover {
+    border-color: #36d9e8;
+}
+
+.option.selected {
+    border-color: #43e6a5;
+    background: #102d2c;
+}
+
+.option b {
+    display: block;
+}
+
+.option small {
+    color: #8ea3ba;
+}
+
+.progress {
+    display: flex;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.progress i {
+    height: 5px;
+    flex: 1;
+    background: #273b55;
+    border-radius: 5px;
+}
+
+.progress i.on {
+    background: #43e6a5;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid #20344e;
+    padding: 11px 0;
+}
+
+.score {
+    color: #43e6a5;
+    font-weight: 800;
+}
+
+footer {
+    text-align: center;
+    color: #7189a4;
+    padding: 25px 15px;
+}
+
+@media (max-width: 650px) {
+
+    .hero {
+        display: block;
+        padding-top: 20px;
+    }
+
+    .heroArt {
+        margin-top: 25px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .art {
+        height: 230px;
+    }
+
+    .nav a {
+        font-size: 12px;
+        padding: 7px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+}
